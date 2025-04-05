@@ -1,0 +1,60 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart-line { fill: none; stroke-width: 2.5; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .label { font-family: Arial; font-size: 12px; fill: #555; }
+    .title { font-family: Arial; font-size: 14px; font-weight: bold; fill: #333; }
+    .candle { stroke-width: 1; }
+    .candle-up { fill: #10b981; stroke: #10b981; }
+    .candle-down { fill: #ef4444; stroke: #ef4444; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="200" fill="#f8fafc" rx="5" ry="5"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="50" y1="150" x2="350" y2="150" class="axis"/>
+  <line x1="50" y1="30" x2="50" y2="150" class="axis"/>
+  
+  <!-- 黄金价格线 -->
+  <path d="M50,120 C80,110 100,100 130,90 C160,80 180,70 200,60 C220,50 240,40 270,50 C300,60 320,50 350,40" 
+        class="chart-line" stroke="#eab308"/>
+  
+  <!-- 铜价格线 -->
+  <path d="M50,130 C80,120 100,110 130,100 C160,90 180,100 200,110 C220,100 240,90 270,80 C300,70 320,80 350,70" 
+        class="chart-line" stroke="#f97316"/>
+  
+  <!-- K线图 -->
+  <!-- 黄金 K线 -->
+  <line x1="70" y1="70" x2="70" y2="90" class="candle candle-up"/>
+  <rect x="65" y="70" width="10" height="10" class="candle candle-up"/>
+  
+  <line x1="90" y1="90" x2="90" y2="110" class="candle candle-down"/>
+  <rect x="85" y="90" width="10" height="10" class="candle candle-down"/>
+  
+  <line x1="110" y1="100" x2="110" y2="80" class="candle candle-up"/>
+  <rect x="105" y="80" width="10" height="10" class="candle candle-up"/>
+  
+  <line x1="130" y1="80" x2="130" y2="100" class="candle candle-down"/>
+  <rect x="125" y="80" width="10" height="10" class="candle candle-down"/>
+  
+  <line x1="150" y1="70" x2="150" y2="50" class="candle candle-up"/>
+  <rect x="145" y="50" width="10" height="10" class="candle candle-up"/>
+  
+  <!-- 轴标签 -->
+  <text x="200" y="175" text-anchor="middle" class="label">时间</text>
+  <text x="25" y="90" text-anchor="middle" class="label" transform="rotate(-90,25,90)">价格</text>
+  
+  <!-- 图例 -->
+  <line x1="50" y1="180" x2="70" y2="180" class="chart-line" stroke="#eab308"/>
+  <text x="75" y="184" class="label">黄金</text>
+  
+  <line x1="130" y1="180" x2="150" y2="180" class="chart-line" stroke="#f97316"/>
+  <text x="155" y="184" class="label">铜</text>
+  
+  <rect x="210" y="176" width="8" height="8" class="candle candle-up"/>
+  <text x="225" y="184" class="label">上涨</text>
+  
+  <rect x="260" y="176" width="8" height="8" class="candle candle-down"/>
+  <text x="275" y="184" class="label">下跌</text>
+</svg>

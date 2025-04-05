@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>期货市场全面指南 by 不霁何虹</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.294.0/dist/umd/lucide-icons.min.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- 防止页面缩放 -->
+    <script>
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+
+    <header class="py-6 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-semibold tracking-tight text-center">期货市场全面指南</h1>
+            <p class="text-center text-gray-600 mt-2">了解各类期货品种的基础知识与国内外市场差异</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- 期货市场概述 -->
+        <section id="overview" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">期货市场概述</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/2">
+                    <p class="mb-4">期货市场是一个规范化的金融市场，交易者通过标准化合约对未来特定时间的商品或金融产品进行买卖。期货交易主要分为商品期货和金融期货两大类，广泛应用于风险管理、价格发现和投资。</p>
+                    
+                    <h3 class="text-xl font-medium mb-3 mt-6">期货交易的基本原理</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>交易者通过买入（做多）或卖出（做空）期货合约来参与市场</li>
+                        <li>采用保证金交易制度，投资者只需缴纳合约金额的一部分作为保证金</li>
+                        <li>期货合约有明确的到期日，到期时通过现金结算或实物交割了结</li>
+                        <li>大多数交易者会在合约到期前通过平仓来结束交易</li>
+                        <li>期货市场提供套期保值、投机和套利三种基本交易功能</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-50 p-5 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-medium mb-4">期货市场分类</h3>
+                        <img src="chart-futures.svg" alt="期货市场分类图" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 快速导航 -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="#foreign-exchange" class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow transition-shadow duration-200 flex flex-col items-center">
+                    <span class="text-blue-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bitcoin"><path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.215-6.893m-1.215 6.893-3.94-.694m5.155-6.2L8.29 4.26m5.908 1.042.348-1.97M7.48 20.364l3.126-17.727"/></svg>
+                    </span>
+                    <span>外汇期货</span>
+                </a>
+                <a href="#agricultural" class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow transition-shadow duration-200 flex flex-col items-center">
+                    <span class="text-green-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wheat"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg>
+                    </span>
+                    <span>农产品期货</span>
+                </a>
+                <a href="#energy" class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow transition-shadow duration-200 flex flex-col items-center">
+                    <span class="text-yellow-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fuel"><path d="M3 22h12"/><path d="M12 16H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v10"/><path d="M8 22v-4"/><path d="M10 22v-10"/><path d="M7 8h5"/><path d="M17 22V9a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v11"/></svg>
+                    </span>
+                    <span>能源期货</span>
+                </a>
+                <a href="#stock-index" class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow transition-shadow duration-200 flex flex-col items-center">
+                    <span class="text-red-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </span>
+                    <span>股指期货</span>
+                </a>
+                <a href="#metals" class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow transition-shadow duration-200 flex flex-col items-center">
+                    <span class="text-amber-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+                    </span>
+                    <span>金属期货</span>
+                </a>
+                <a href="#interest-rate" class="p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow transition-shadow duration-200 flex flex-col items-center">
+                    <span class="text-purple-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+                    </span>
+                    <span>利率期货</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 1. 外汇期货 -->
+        <section id="foreign-exchange" class="mb-12 py-8 section-container" style="--section-color: #3b82f6;">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">1. 外汇期货</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-xl font-medium mb-4">基本定义与概念</h3>
+                    <p class="mb-4">外汇期货是以外汇汇率为标的物的标准化期货合约，承诺在未来特定时间以预先确定的价格买卖外汇。与即期外汇不同，外汇期货合约具有固定的交易单位、交割日期和交易规则。</p>
+                    
+                    <h3 class="text-xl font-medium mb-4 mt-6">交易品种分类</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">类型</th>
+                                    <th class="py-2 px-4 border-b text-left">定义</th>
+                                    <th class="py-2 px-4 border-b text-left">代表品种</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">主要货币对（直盘）</td>
+                                    <td class="py-2 px-4 border-b">始终包含美元的货币对</td>
+                                    <td class="py-2 px-4 border-b">EUR/USD, GBP/USD, USD/JPY</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">交叉货币对（交叉盘）</td>
+                                    <td class="py-2 px-4 border-b">不包含美元的货币对</td>
+                                    <td class="py-2 px-4 border-b">EUR/GBP, GBP/JPY</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">奇异货币对</td>
+                                    <td class="py-2 px-4 border-b">由一种主要货币和一种新兴市场货币组成</td>
+                                    <td class="py-2 px-4 border-b">USD/CNH, EUR/TRY</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class="text-xl font-medium mb-4">交易原理</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li><strong>标准化合约</strong>：每份合约明确规定交易的货币种类、数量、交割日期和方式</li>
+                        <li><strong>保证金交易</strong>：投资者只需缴纳合约价值的一小部分作为保证金，实现杠杆交易</li>
+                        <li><strong>中央对手方清算</strong>：清算所作为交易中间人，降低交易对手风险</li>
+                        <li><strong>每日结算制度</strong>：每个交易日结束时对所有未平仓合约进行价值重估和结算</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-medium mb-4 text-blue-700">外汇期货应用</h3>
+                        <img src="foreign-exchange.svg" alt="外汇期货图表" class="w-full mb-4">
+                        <p class="text-sm text-gray-600">外汇期货价格受多种因素影响，主要包括货币供应量、利率变动、投资者和贸易商在货币市场上的交易行为以及汇率波动等。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-medium mb-4">主要交易所</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国际交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>芝商所(CME Group)：全球最大外汇期货交易平台</li>
+                                    <li>欧洲期货交易所(Eurex)</li>
+                                    <li>新加坡国际金融交易所(SIMEX)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国内交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>中国金融期货交易所：尚未推出成熟的外汇期货产品</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国内外市场差异 -->
+            <div class="mt-8">
+                <h3 class="text-xl font-medium mb-4">国内外市场差异</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">比较方面</th>
+                                <th class="py-2 px-4 border-b text-left">国际市场</th>
+                                <th class="py-2 px-4 border-b text-left">国内市场</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易品种</td>
+                                <td class="py-2 px-4 border-b">品种丰富多样，包括各类迷你合约</td>
+                                <td class="py-2 px-4 border-b">品种相对有限</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">涨跌限制</td>
+                                <td class="py-2 px-4 border-b">多数品种无涨跌停板限制</td>
+                                <td class="py-2 px-4 border-b">有5%-10%的涨跌幅限制</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易时间</td>
+                                <td class="py-2 px-4 border-b">接近24小时不间断交易</td>
+                                <td class="py-2 px-4 border-b">通常每天7-8小时</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易成本</td>
+                                <td class="py-2 px-4 border-b">手续费较低，无税费、无点差</td>
+                                <td class="py-2 px-4 border-b">手续费相对较高</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">保证金</td>
+                                <td class="py-2 px-4 border-b">通常为5%-10%</td>
+                                <td class="py-2 px-4 border-b">比例相对较高</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">杠杆比例</td>
+                                <td class="py-2 px-4 border-b">可达几百倍</td>
+                                <td class="py-2 px-4 border-b">通常为10-20倍</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 农产品期货 -->
+        <section id="agricultural" class="mb-12 py-8 section-container" style="--section-color: #10b981;">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">2. 农产品期货</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-xl font-medium mb-4">基本定义与概念</h3>
+                    <p class="mb-4">农产品期货是以农产品为标的物的期货合约，允许农产品生产者、加工商和投资者对农产品价格进行风险管理和交易。"期货农业"相较传统"订单农业"具有风险较低、价格提前发现和农民增收等优势。</p>
+                    
+                    <h3 class="text-xl font-medium mb-4 mt-6">交易品种分类</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">类别</th>
+                                    <th class="py-2 px-4 border-b text-left">主要品种</th>
+                                    <th class="py-2 px-4 border-b text-left">特点</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">粮食期货</td>
+                                    <td class="py-2 px-4 border-b">小麦、玉米、大豆、豆粕、红豆、大米</td>
+                                    <td class="py-2 px-4 border-b">大豆、玉米和小麦为最重要品种</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">经济作物期货</td>
+                                    <td class="py-2 px-4 border-b">原糖、咖啡、可可、棕榈油、菜籽</td>
+                                    <td class="py-2 px-4 border-b">受天气与季节性因素影响大</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">畜产品期货</td>
+                                    <td class="py-2 px-4 border-b">生猪、冷冻猪肉、活牛、小牛</td>
+                                    <td class="py-2 px-4 border-b">价格波动受疫情影响显著</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">林产品期货</td>
+                                    <td class="py-2 px-4 border-b">木材、天然橡胶</td>
+                                    <td class="py-2 px-4 border-b">生产周期长，供应调节慢</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class="text-xl font-medium mb-4">交易原理</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li><strong>现货与期货市场联动</strong>：两个市场价格存在同涨同跌趋势，互相影响</li>
+                        <li><strong>套期保值</strong>：利用期货合约替代现货交易，规避价格风险</li>
+                        <li><strong>对冲交易</strong>：通过卖出对冲和买进对冲转移价格风险</li>
+                        <li><strong>季节性影响</strong>：收获季节供应增加可能导致价格下跌，反之则上涨</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <div class="bg-green-50 p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-medium mb-4 text-green-700">农产品期货应用</h3>
+                        <img src="agricultural.svg" alt="农产品期货图表" class="w-full mb-4">
+                        <p class="text-sm text-gray-600">农产品期货价格受全球供需、天气条件和政策变动的影响。交易策略包括基本面分析、技术分析、套利和季节性交易。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-medium mb-4">主要交易所</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国际交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>芝加哥期货交易所(CBOT)：规模最大的农产品交易所</li>
+                                    <li>纽约商业交易所(NYMEX)</li>
+                                    <li>洲际交易所(ICE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国内交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>大连商品交易所(DCE)：中国最大的农产品期货交易所</li>
+                                    <li>郑州商品交易所(CZCE)：小麦、棉花、白糖等农产品期货</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国内外市场差异 -->
+            <div class="mt-8">
+                <h3 class="text-xl font-medium mb-4">国内外市场差异</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">比较方面</th>
+                                <th class="py-2 px-4 border-b text-left">国际市场</th>
+                                <th class="py-2 px-4 border-b text-left">国内市场</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易品种</td>
+                                <td class="py-2 px-4 border-b">品种丰富多样</td>
+                                <td class="py-2 px-4 border-b">相对较少</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">涨跌限制</td>
+                                <td class="py-2 px-4 border-b">不设涨跌停板</td>
+                                <td class="py-2 px-4 border-b">设有涨跌幅限制</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易时间</td>
+                                <td class="py-2 px-4 border-b">接近24小时不间断交易</td>
+                                <td class="py-2 px-4 border-b">每天7-8小时</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">价格影响</td>
+                                <td class="py-2 px-4 border-b">CBOT对国内大豆期货有较大影响力</td>
+                                <td class="py-2 px-4 border-b">受国际市场影响显著</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">市场开放</td>
+                                <td class="py-2 px-4 border-b">完全开放</td>
+                                <td class="py-2 px-4 border-b">大豆市场较开放，小麦市场受管制</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 能源期货 -->
+        <section id="energy" class="mb-12 py-8 section-container" style="--section-color: #f59e0b;">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">3. 能源期货</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-xl font-medium mb-4">基本定义与概念</h3>
+                    <p class="mb-4">能源期货是以能源产品为标的物的标准化期货合约，包括原油、天然气、煤炭、电力等品种，是国际能源贸易中重要的价格风险管理工具。</p>
+                    
+                    <h3 class="text-xl font-medium mb-4 mt-6">交易品种分类</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">品种</th>
+                                    <th class="py-2 px-4 border-b text-left">特点</th>
+                                    <th class="py-2 px-4 border-b text-left">主要影响因素</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">原油期货</td>
+                                    <td class="py-2 px-4 border-b">全球需求量大，流动性高</td>
+                                    <td class="py-2 px-4 border-b">地缘政治、供需关系、OPEC决策</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">天然气期货</td>
+                                    <td class="py-2 px-4 border-b">季节性需求波动大</td>
+                                    <td class="py-2 px-4 border-b">天气变化、储存水平、管道容量</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">煤炭期货</td>
+                                    <td class="py-2 px-4 border-b">包括动力煤、焦煤、焦炭</td>
+                                    <td class="py-2 px-4 border-b">环保政策、替代能源发展</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">电力期货</td>
+                                    <td class="py-2 px-4 border-b">不可储存，地区差异大</td>
+                                    <td class="py-2 px-4 border-b">发电成本、需求变化、政策调控</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">燃料油期货</td>
+                                    <td class="py-2 px-4 border-b">中国唯一油品期货品种</td>
+                                    <td class="py-2 px-4 border-b">原油价格、炼厂产能、环保规定</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class="text-xl font-medium mb-4">交易原理</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li><strong>期货合约的本质</strong>：约定在未来特定时间以特定价格交易能源产品</li>
+                        <li><strong>做多与做空</strong>：可通过多空操作应对不同市场预期</li>
+                        <li><strong>保证金制度</strong>：一般为合约价值的10%左右，具有高杠杆特性</li>
+                        <li><strong>基本面分析重要性</strong>：产量数据、库存水平是交易决策的关键信息</li>
+                        <li><strong>对冲策略</strong>：常见的"远空近多"策略用于规避价格风险</li>
+                    </ul>
+
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-medium mb-2">原油分类知识</h4>
+                        <p class="text-sm mb-2">原油可按照多种标准进行分类：</p>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li><strong>按组成分类</strong>：石蜡基原油、环烷基原油和中间基原油</li>
+                            <li><strong>按硫含量分类</strong>：超低硫原油、低硫原油、含硫原油和高硫原油</li>
+                            <li><strong>按相对密度分类</strong>：轻质、中质和重质原油</li>
+                        </ul>
+                        <p class="text-sm mt-2">通常来讲，油越轻，硫含量越低，油的品质越好，价格也越高。</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-medium mb-4 text-yellow-700">能源期货应用</h3>
+                        <img src="energy.svg" alt="能源期货图表" class="w-full mb-4">
+                        <p class="text-sm text-gray-600">全球原油市场受OPEC、IEA和EIA三大机构报告的影响。OPEC月报提供成员国的产量、需求预期和库存等信息，是原油供给的"风向标"。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-medium mb-4">主要交易所</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国际交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>纽约商业交易所(NYMEX)：全球最大能源期货交易市场</li>
+                                    <li>洲际交易所(ICE)：主要交易布伦特原油等能源产品</li>
+                                    <li>东京商品交易所(TOCOM)：交易能源和贵金属期货</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国内交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>上海期货交易所(SHFE)</li>
+                                    <li>上海国际能源交易中心(INE)：为SHFE子公司</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国内外市场差异 -->
+            <div class="mt-8">
+                <h3 class="text-xl font-medium mb-4">国内外市场差异</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">比较方面</th>
+                                <th class="py-2 px-4 border-b text-left">国际市场</th>
+                                <th class="py-2 px-4 border-b text-left">中国市场</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易标的</td>
+                                <td class="py-2 px-4 border-b">以WTI和布伦特原油为主</td>
+                                <td class="py-2 px-4 border-b">以中质含硫原油为主</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易时间</td>
+                                <td class="py-2 px-4 border-b">集中在纽约和伦敦交易时段</td>
+                                <td class="py-2 px-4 border-b">覆盖亚欧美主要交易时段</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交割方式</td>
+                                <td class="py-2 px-4 border-b">主要采用实物交割</td>
+                                <td class="py-2 px-4 border-b">采用保税交割方式</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">报价单位</td>
+                                <td class="py-2 px-4 border-b">美元/桶</td>
+                                <td class="py-2 px-4 border-b">人民币/桶</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">市场影响</td>
+                                <td class="py-2 px-4 border-b">受OPEC、IEA和EIA机构报告影响大</td>
+                                <td class="py-2 px-4 border-b">受国际油价和国内政策双重影响</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 股指期货 -->
+        <section id="stock-index" class="mb-12 py-8 section-container" style="--section-color: #ef4444;">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">4. 股指期货</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-xl font-medium mb-4">基本定义与概念</h3>
+                    <p class="mb-4">股指期货是以股票价格指数为标的物的标准化期货合约，交易双方约定在未来特定日期按预先确定的股票指数大小进行交易，通过现金结算差价进行交割。它是重要的金融风险管理工具，可用于对冲股票组合风险。</p>
+                    
+                    <h3 class="text-xl font-medium mb-4 mt-6">中国主要股指期货品种</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">合约代码</th>
+                                    <th class="py-2 px-4 border-b text-left">标的指数</th>
+                                    <th class="py-2 px-4 border-b text-left">合约乘数</th>
+                                    <th class="py-2 px-4 border-b text-left">最低保证金率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">IF</td>
+                                    <td class="py-2 px-4 border-b">沪深300指数</td>
+                                    <td class="py-2 px-4 border-b">每点300元</td>
+                                    <td class="py-2 px-4 border-b">合约价值的8%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">IC</td>
+                                    <td class="py-2 px-4 border-b">中证500指数</td>
+                                    <td class="py-2 px-4 border-b">每点200元</td>
+                                    <td class="py-2 px-4 border-b">合约价值的8%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">IH</td>
+                                    <td class="py-2 px-4 border-b">上证50指数</td>
+                                    <td class="py-2 px-4 border-b">每点300元</td>
+                                    <td class="py-2 px-4 border-b">合约价值的8%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">IM</td>
+                                    <td class="py-2 px-4 border-b">中证1000指数</td>
+                                    <td class="py-2 px-4 border-b">每点200元</td>
+                                    <td class="py-2 px-4 border-b">合约价值的8%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class="text-xl font-medium mb-4">交易原理</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li><strong>合约定价</strong>：主要受现货指数、借款利率和股息收益率影响
+                            <ul class="pl-6 mt-1">
+                                <li class="text-sm">理论价格公式：F = I + I × (R - D) = I × (1 - R + D)</li>
+                                <li class="text-sm">R为年利率，D为年股息收益率</li>
+                            </ul>
+                        </li>
+                        <li><strong>交易方式</strong>：通过电子化交易系统撮合成交，需缴纳保证金</li>
+                        <li><strong>结算与交割</strong>：采用现金交割，以到期日的现货指数作为最终结算价</li>
+                    </ul>
+
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-medium mb-2">股指期货交易特点</h4>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li>合约有到期日，不能无限期持有</li>
+                            <li>双向交易，即可做多，也可做空</li>
+                            <li>采用保证金制度，实行杠杆交易</li>
+                            <li>采用当日无负债结算制度，存在强制平仓的可能</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-medium mb-2">中国股指期货开户条件</h4>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li><strong>资金要求</strong>：开户资金最少50万元人民币</li>
+                            <li><strong>经验要求</strong>：具备累计10个交易日、20笔以上的股指期货仿真交易成交记录，或最近三年内具有10笔以上的商品期货交易成交记录</li>
+                            <li><strong>知识储备要求</strong>：通过中金所提供的考题测试，合格分数线为80分</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <div class="bg-red-50 p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-medium mb-4 text-red-700">股指期货应用</h3>
+                        <img src="stock-index.svg" alt="股指期货图表" class="w-full mb-4">
+                        <p class="text-sm text-gray-600">股指期货有四种交易行为：套期保值交易、期现套利交易、价差交易及投机交易。在通常情况下，股指期货与股票现货受相同因素的影响，变动方向一致。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-medium mb-4">主要交易所</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国际交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>芝加哥商业交易所(CME)：交易标普500、道琼斯等指数期货</li>
+                                    <li>欧洲期货交易所(Eurex)：交易德国DAX等欧洲股指期货</li>
+                                    <li>新加坡交易所(SGX)：交易日经225等亚洲股指期货</li>
+                                    <li>韩国交易所(KRX)：KOSPI 200指数期货交易量曾居全球首位</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国内交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>中国金融期货交易所(中金所)：中国唯一交易股指期货的交易所</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-3">中国股指期货发展历程</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <strong class="block">起步期 (2006.10-2015.6)</strong>
+                                <span>2006年10月启动仿真交易，2010年4月沪深300股指期货上市</span>
+                            </li>
+                            <li>
+                                <strong class="block">调整期 (2015.7-2017.2)</strong>
+                                <span>2015年7月至9月，中金所连续上调最低保证金率及手续费</span>
+                            </li>
+                            <li>
+                                <strong class="block">复兴期 (2017.3-2021)</strong>
+                                <span>中金所四次对股指期货合约设计与交易制度作出梯度性调整</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国内外市场差异 -->
+            <div class="mt-8">
+                <h3 class="text-xl font-medium mb-4">国内外市场差异</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">比较方面</th>
+                                <th class="py-2 px-4 border-b text-left">国际市场</th>
+                                <th class="py-2 px-4 border-b text-left">中国市场</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易时间</td>
+                                <td class="py-2 px-4 border-b">平均每日交易18.3小时，接近全天候</td>
+                                <td class="py-2 px-4 border-b">交易时间明显较短</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">市场成熟度</td>
+                                <td class="py-2 px-4 border-b">连续交易已成为全球主流</td>
+                                <td class="py-2 px-4 border-b">交易时间有限，隔夜风险管理不足</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">投资者结构</td>
+                                <td class="py-2 px-4 border-b">机构投资者占主导地位</td>
+                                <td class="py-2 px-4 border-b">2015年后机构参与度下降</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">做空难度</td>
+                                <td class="py-2 px-4 border-b">做空机制完善</td>
+                                <td class="py-2 px-4 border-b">做空受到较多限制</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">基差状况</td>
+                                <td class="py-2 px-4 border-b">基差波动相对合理</td>
+                                <td class="py-2 px-4 border-b">2015年后长期处于深度贴水状态</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 金属期货 -->
+        <section id="metals" class="mb-12 py-8 section-container" style="--section-color: #f59e0b;">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">5. 金属期货</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-xl font-medium mb-4">基本定义与概念</h3>
+                    <p class="mb-4">金属期货是以金属产品为标的物的期货合约，主要分为贵金属和基本金属两大类。由于金属在工业生产和金融投资中的重要性，金属期货成为期货市场的重要组成部分。</p>
+                    
+                    <h3 class="text-xl font-medium mb-4 mt-6">交易品种分类</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">类别</th>
+                                    <th class="py-2 px-4 border-b text-left">主要品种</th>
+                                    <th class="py-2 px-4 border-b text-left">主要用途</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">贵金属</td>
+                                    <td class="py-2 px-4 border-b">黄金、白银、铂、钯</td>
+                                    <td class="py-2 px-4 border-b">投资避险、工业应用、珠宝制造</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">基本金属</td>
+                                    <td class="py-2 px-4 border-b">铜、铝、锌、铅、镍、锡</td>
+                                    <td class="py-2 px-4 border-b">建筑、电力、制造业、交通运输</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">黑色金属</td>
+                                    <td class="py-2 px-4 border-b">铁矿石</td>
+                                    <td class="py-2 px-4 border-b">钢铁生产的主要原料</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class="text-xl font-medium mb-4">交易原理</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li><strong>标准化合约</strong>：规定交割日期、地点和最小价格波动单位</li>
+                        <li><strong>保证金交易</strong>：交易者只需缴纳合约价值的一部分作为保证金</li>
+                        <li><strong>套期保值</strong>：生产商和消费者可通过金属期货锁定未来价格</li>
+                        <li><strong>价格影响因素</strong>：全球经济状况、供需关系、政策变化是主要影响因素</li>
+                        <li><strong>交割方式</strong>：可选择实物交割或平仓了结</li>
+                    </ul>
+
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-medium mb-2">主要金属品种及其影响因素</h4>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border border-gray-200 text-sm">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="py-2 px-3 border-b text-left">金属品种</th>
+                                        <th class="py-2 px-3 border-b text-left">主要用途</th>
+                                        <th class="py-2 px-3 border-b text-left">影响价格的主要因素</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-2 px-3 border-b font-medium">铜</td>
+                                        <td class="py-2 px-3 border-b">电力、建筑、制造业</td>
+                                        <td class="py-2 px-3 border-b">全球经济状况、供需关系、政策变化</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3 border-b font-medium">铝</td>
+                                        <td class="py-2 px-3 border-b">包装、建筑、交通运输</td>
+                                        <td class="py-2 px-3 border-b">生产成本、供需关系、政策变化</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3 border-b font-medium">黄金</td>
+                                        <td class="py-2 px-3 border-b">投资避险、珠宝制造</td>
+                                        <td class="py-2 px-3 border-b">通胀预期、地缘政治、美元指数</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <div class="bg-amber-50 p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-medium mb-4 text-amber-700">金属期货应用</h3>
+                        <img src="metals.svg" alt="金属期货图表" class="w-full mb-4">
+                        <p class="text-sm text-gray-600">金属期货的优势主要体现在套期保值和投机机会两个方面。企业可以通过买卖金属期货合约，锁定未来的金属价格，规避价格波动风险。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-medium mb-4">主要交易所</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国际交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>伦敦金属交易所(LME)：全球最大的基本金属交易所</li>
+                                    <li>纽约商品交易所(COMEX)：全球最大的黄金和白银期货市场</li>
+                                    <li>芝加哥商业交易所(CME)：提供多种金属期货和期权产品</li>
+                                    <li>东京商品交易所(TOCOM)：亚洲重要的贵金属交易市场</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国内交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>上海期货交易所(SHFE)：交易铜、铝、锌、铅、镍、锡、黄金、白银等</li>
+                                    <li>大连商品交易所(DCE)：交易铁矿石期货</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">投资注意事项</h4>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li><strong>市场分析</strong>：密切关注全球经济形势、供需关系、政策变化等因素</li>
+                            <li><strong>风险管理</strong>：制定合理的风险管理策略，设置止损点，避免巨大损失</li>
+                            <li><strong>信息获取</strong>：通过多种渠道获取市场信息，包括新闻报道、行业报告、专家分析等</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国内外市场差异 -->
+            <div class="mt-8">
+                <h3 class="text-xl font-medium mb-4">国内外市场差异</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">比较方面</th>
+                                <th class="py-2 px-4 border-b text-left">国际市场</th>
+                                <th class="py-2 px-4 border-b text-left">国内市场</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">市场关联性</td>
+                                <td class="py-2 px-4 border-b">LME铜铝价格具全球定价权</td>
+                                <td class="py-2 px-4 border-b">SHFE价格受LME影响显著</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易品种</td>
+                                <td class="py-2 px-4 border-b">品种丰富，包括多种小规格合约</td>
+                                <td class="py-2 px-4 border-b">品种相对有限</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">涨跌限制</td>
+                                <td class="py-2 px-4 border-b">多数品种无涨跌停板限制</td>
+                                <td class="py-2 px-4 border-b">设有涨跌幅限制</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易时间</td>
+                                <td class="py-2 px-4 border-b">接近24小时不间断交易</td>
+                                <td class="py-2 px-4 border-b">每天约7-8小时</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">国际化程度</td>
+                                <td class="py-2 px-4 border-b">完全开放的国际市场</td>
+                                <td class="py-2 px-4 border-b">国际化品种相对有限</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 利率期货 -->
+        <section id="interest-rate" class="mb-12 py-8 section-container" style="--section-color: #8b5cf6;">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">6. 利率期货</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-xl font-medium mb-4">基本定义与概念</h3>
+                    <p class="mb-4">利率期货是以利率相关金融工具为标的物的期货合约，主要用于规避利率风险。它是一种短期投资，到期日固定，在交易市场上有标准化的交易量。</p>
+                    
+                    <h3 class="text-xl font-medium mb-4 mt-6">交易品种分类</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="py-2 px-4 border-b text-left">分类</th>
+                                    <th class="py-2 px-4 border-b text-left">特点</th>
+                                    <th class="py-2 px-4 border-b text-left">代表品种</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">短期利率期货</td>
+                                    <td class="py-2 px-4 border-b">标的期限在一年以内</td>
+                                    <td class="py-2 px-4 border-b">联邦基金利率期货、欧洲美元期货</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b font-medium">长期利率期货</td>
+                                    <td class="py-2 px-4 border-b">标的期限在一年以上</td>
+                                    <td class="py-2 px-4 border-b">国债期货、利率掉期期货</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 class="text-xl font-medium mb-4">交易原理</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li><strong>价格与利率关系</strong>：利率期货价格与实际利率呈反向变动
+                            <ul class="pl-6 mt-1 text-sm">
+                                <li>利率上升，债券期货价格降低</li>
+                                <li>利率降低，债券期货价格升高</li>
+                            </ul>
+                        </li>
+                        <li><strong>交割方式</strong>：主要采取现金交割，有时也采取现券交割</li>
+                        <li><strong>利率期权</strong>：提供在特定期间内按预定利率交易的权利
+                            <ul class="pl-6 mt-1 text-sm">
+                                <li>看涨期权：利率上升时获益</li>
+                                <li>看跌期权：利率下降时获益</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-medium mb-2">交易功能</h4>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li><strong>价格发现</strong>：有助于提高债券市场价格的信息含量</li>
+                            <li><strong>优化资产配置</strong>：降低交易成本，提高投资收益率</li>
+                            <li><strong>规避风险</strong>：固定未来贷款利率或投资利率</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-medium mb-2">影响利率期货价格波动的因素</h4>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li><strong>货币供应量</strong>：货币供应不足时，利率上升；货币供应过剩时，利率下跌</li>
+                            <li><strong>经济发展速度</strong>：经济发展速度较快，贷款需求旺盛时，利率会升高</li>
+                            <li><strong>政府的财政收入</strong>：当出现财政赤字时，利率会受到一定的影响</li>
+                            <li><strong>其他国家利率水平</strong>：一国的利率水平很容易受到其他国家利率水平的影响</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5">
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-sm mb-6">
+                        <h3 class="text-xl font-medium mb-4 text-purple-700">利率期货应用</h3>
+                        <img src="interest-rate.svg" alt="利率期货图表" class="w-full mb-4">
+                        <p class="text-sm text-gray-600">利率期货是一种金融期货，其标的物是与利率相关的金融工具，主要为各类固定收益金融工具。它主要用于规避利率风险，帮助金融机构和投资者锁定未来的贷款或投资利率。</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-xl font-medium mb-4">主要交易所</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国际交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>芝加哥商品交易所(CME)：全球领先的利率衍生品交易市场</li>
+                                    <li>伦敦国际金融期货交易所(LIFFE)：欧洲市场核心</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <h4 class="font-medium">国内交易所</h4>
+                                <ul class="list-disc pl-6 text-sm mt-1">
+                                    <li>中国金融期货交易所(中金所)：交易国债期货</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">常见利率期货品种</h4>
+                        <ul class="list-disc pl-6 text-sm">
+                            <li><strong>债券期货</strong>：以国债期货为主，是各主要交易所最重要的利率期货品种</li>
+                            <li><strong>主要参考利率期货</strong>：包括伦敦银行间同业拆放利率(Libor)、香港银行间同业拆放利率(Hibor)、欧洲美元定期存款单利率、联邦基金利率等</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国内外市场差异 -->
+            <div class="mt-8">
+                <h3 class="text-xl font-medium mb-4">国内外市场差异</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="py-2 px-4 border-b text-left">比较方面</th>
+                                <th class="py-2 px-4 border-b text-left">国际市场</th>
+                                <th class="py-2 px-4 border-b text-left">国内市场</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易品种</td>
+                                <td class="py-2 px-4 border-b">品种丰富多样，包括多种期限产品</td>
+                                <td class="py-2 px-4 border-b">以国债期货为主，品种相对有限</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">涨跌限制</td>
+                                <td class="py-2 px-4 border-b">多数品种不设涨跌停板</td>
+                                <td class="py-2 px-4 border-b">有涨跌幅限制</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">交易时间</td>
+                                <td class="py-2 px-4 border-b">接近24小时不间断交易</td>
+                                <td class="py-2 px-4 border-b">每天约7-8小时</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">价格发现</td>
+                                <td class="py-2 px-4 border-b">价格发现功能完善</td>
+                                <td class="py-2 px-4 border-b">利率衍生品优于现货市场，互换优于期货</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b font-medium">投资者结构</td>
+                                <td class="py-2 px-4 border-b">机构投资者占主导</td>
+                                <td class="py-2 px-4 border-b">投资者结构不够完善</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 期货交易所汇总表 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">期货交易所汇总表</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="py-2 px-4 border-b text-left">类别</th>
+                            <th class="py-2 px-4 border-b text-left">国际主要交易所</th>
+                            <th class="py-2 px-4 border-b text-left">国内主要交易所</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">综合类</td>
+                            <td class="py-2 px-4 border-b">芝商所(CME Group)、欧洲期货交易所(Eurex)</td>
+                            <td class="py-2 px-4 border-b">-</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">外汇期货</td>
+                            <td class="py-2 px-4 border-b">芝加哥商业交易所(CME)、新加坡国际金融交易所(SIMEX)</td>
+                            <td class="py-2 px-4 border-b">中国金融期货交易所(中金所)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">农产品期货</td>
+                            <td class="py-2 px-4 border-b">芝加哥期货交易所(CBOT)、洲际交易所(ICE)</td>
+                            <td class="py-2 px-4 border-b">大连商品交易所(DCE)、郑州商品交易所(CZCE)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">能源期货</td>
+                            <td class="py-2 px-4 border-b">纽约商业交易所(NYMEX)、洲际交易所(ICE)</td>
+                            <td class="py-2 px-4 border-b">上海期货交易所(SHFE)/上海国际能源交易中心(INE)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">股指期货</td>
+                            <td class="py-2 px-4 border-b">芝加哥商业交易所(CME)、欧洲期货交易所(Eurex)</td>
+                            <td class="py-2 px-4 border-b">中国金融期货交易所(中金所)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">金属期货</td>
+                            <td class="py-2 px-4 border-b">伦敦金属交易所(LME)、纽约商品交易所(COMEX)</td>
+                            <td class="py-2 px-4 border-b">上海期货交易所(SHFE)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b font-medium">利率期货</td>
+                            <td class="py-2 px-4 border-b">芝加哥商业交易所(CME)、伦敦国际金融期货交易所(LIFFE)</td>
+                            <td class="py-2 px-4 border-b">中国金融期货交易所(中金所)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 国内外期货市场主要差异总结 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">国内外期货市场主要差异总结</h2>
+            <div class="flex justify-center mb-8">
+                <img src="comparison-chart.svg" alt="国内外期货市场差异比较图" class="w-full max-w-4xl">
+            </div>
+        </section>
+
+        <!-- 期货投资注意事项 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 pb-2 border-b border-gray-200">期货投资注意事项</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-medium mb-4">风险管理至上</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>严格控制仓位，不要满仓操作</li>
+                        <li>设置止损点，避免因价格剧烈波动带来巨大损失</li>
+                        <li>分散投资不同品种，降低单一品种风险</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-medium mb-4">了解基本面</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>掌握期货标的物的供需状况</li>
+                        <li>关注相关产业政策变化</li>
+                        <li>跟踪国际市场动态</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-medium mb-4">技术分析与资金管理</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>合理运用技术分析工具</li>
+                        <li>科学分配资金，避免过度杠杆</li>
+                        <li>保持充足的资金安全垫</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-medium mb-4">特殊注意事项</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>临近交割月注意移仓换月</li>
+                        <li>关注保证金变动情况</li>
+                        <li>农产品期货尤其注意天气因素</li>
+                        <li>能源期货尤其关注地缘政治因素</li>
+                        <li>金融期货需关注央行政策动向</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gray-100 p-5 rounded-lg mt-6">
+                <p class="text-center">期货市场具有高杠杆、高风险特性，投资者应当充分了解各类期货品种特点，谨慎投资，严格控制风险。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p class="mb-2">反关财经 <a href="https://flowith.net" target="_blank" class="text-blue-600 hover:underline">by 不霁何虹</a>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

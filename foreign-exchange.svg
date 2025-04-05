@@ -1,0 +1,40 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart-line { fill: none; stroke-width: 2.5; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .label { font-family: Arial; font-size: 12px; fill: #555; }
+    .title { font-family: Arial; font-size: 14px; font-weight: bold; fill: #333; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="200" fill="#f8fafc" rx="5" ry="5"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="50" y1="150" x2="350" y2="150" class="axis"/>
+  <line x1="50" y1="30" x2="50" y2="150" class="axis"/>
+  
+  <!-- 外汇期货价格线 -->
+  <path d="M50,100 C80,120 100,80 130,90 C160,100 180,60 200,70 C220,80 240,50 270,60 C300,70 320,40 350,50" 
+        class="chart-line" stroke="#3b82f6"/>
+  
+  <!-- 参考价格线 -->
+  <path d="M50,110 C80,105 100,115 130,110 C160,105 180,115 200,110 C220,105 240,115 270,110 C300,105 320,115 350,110" 
+        class="chart-line" stroke="#9ca3af" stroke-dasharray="4,2"/>
+  
+  <!-- 轴标签 -->
+  <text x="200" y="175" text-anchor="middle" class="label">时间</text>
+  <text x="25" y="90" text-anchor="middle" class="label" transform="rotate(-90,25,90)">汇率</text>
+  
+  <!-- 图例 -->
+  <circle cx="50" cy="180" r="4" fill="#3b82f6"/>
+  <text x="60" y="184" class="label">外汇期货价格</text>
+  
+  <line x1="150" y1="180" x2="170" y2="180" class="chart-line" stroke="#9ca3af" stroke-dasharray="4,2"/>
+  <text x="180" y="184" class="label">参考价格</text>
+  
+  <!-- 币种符号 -->
+  <text x="70" y="50" class="title" fill="#3b82f6">USD/EUR</text>
+  <text x="150" y="50" class="title" fill="#64748b">USD/JPY</text>
+  <text x="230" y="50" class="title" fill="#10b981">GBP/USD</text>
+  <text x="310" y="50" class="title" fill="#f59e0b">USD/CNH</text>
+</svg>

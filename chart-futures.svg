@@ -1,0 +1,56 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f0f8ff; stroke: #4682b4; stroke-width: 2; }
+    .arrow { stroke: #4682b4; stroke-width: 1.5; fill: none; }
+    .label { font-family: Arial; font-size: 14px; fill: #333; }
+    .title { font-family: Arial; font-size: 16px; font-weight: bold; fill: #333; }
+    .subtitle { font-family: Arial; font-size: 14px; font-style: italic; fill: #555; }
+  </style>
+  
+  <!-- 主标题框 -->
+  <rect x="300" y="20" width="200" height="40" rx="5" class="box" fill="#d0e0f0"/>
+  <text x="400" y="45" text-anchor="middle" class="title">期货市场</text>
+  
+  <!-- 箭头 -->
+  <line x1="400" y1="60" x2="400" y2="80" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <!-- 两大分类 -->
+  <rect x="150" y="80" width="200" height="40" rx="5" class="box"/>
+  <text x="250" y="105" text-anchor="middle" class="title">商品期货</text>
+  
+  <rect x="450" y="80" width="200" height="40" rx="5" class="box"/>
+  <text x="550" y="105" text-anchor="middle" class="title">金融期货</text>
+  
+  <!-- 商品期货子分类箭头 -->
+  <line x1="250" y1="120" x2="250" y2="140" class="arrow"/>
+  
+  <!-- 商品期货子分类 -->
+  <rect x="20" y="140" width="120" height="35" rx="5" class="box"/>
+  <text x="80" y="163" text-anchor="middle" class="label">农产品期货</text>
+  
+  <rect x="150" y="140" width="120" height="35" rx="5" class="box"/>
+  <text x="210" y="163" text-anchor="middle" class="label">金属期货</text>
+  
+  <rect x="280" y="140" width="120" height="35" rx="5" class="box"/>
+  <text x="340" y="163" text-anchor="middle" class="label">能源期货</text>
+  
+  <!-- 金融期货子分类箭头 -->
+  <line x1="550" y1="120" x2="550" y2="140" class="arrow"/>
+  
+  <!-- 金融期货子分类 -->
+  <rect x="450" y="140" width="120" height="35" rx="5" class="box"/>
+  <text x="510" y="163" text-anchor="middle" class="label">股指期货</text>
+  
+  <rect x="580" y="140" width="120" height="35" rx="5" class="box"/>
+  <text x="640" y="163" text-anchor="middle" class="label">利率期货</text>
+  
+  <rect x="710" y="140" width="120" height="35" rx="5" class="box"/>
+  <text x="770" y="163" text-anchor="middle" class="label">外汇期货</text>
+  
+  <!-- 定义标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4682b4"/>
+    </marker>
+  </defs>
+</svg>

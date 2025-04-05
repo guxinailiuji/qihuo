@@ -1,0 +1,65 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart-line { fill: none; stroke-width: 2.5; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .grid { stroke: #eee; stroke-width: 1; }
+    .label { font-family: Arial; font-size: 12px; fill: #555; }
+    .title { font-family: Arial; font-size: 14px; font-weight: bold; fill: #333; }
+    .dot { stroke: #fff; stroke-width: 1; }
+    .area { opacity: 0.2; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="200" fill="#f8fafc" rx="5" ry="5"/>
+  
+  <!-- 网格线 -->
+  <line x1="50" y1="50" x2="350" y2="50" class="grid"/>
+  <line x1="50" y1="100" x2="350" y2="100" class="grid"/>
+  <line x1="50" y1="150" x2="350" y2="150" class="grid"/>
+  <line x1="100" y1="30" x2="100" y2="150" class="grid"/>
+  <line x1="150" y1="30" x2="150" y2="150" class="grid"/>
+  <line x1="200" y1="30" x2="200" y2="150" class="grid"/>
+  <line x1="250" y1="30" x2="250" y2="150" class="grid"/>
+  <line x1="300" y1="30" x2="300" y2="150" class="grid"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="50" y1="150" x2="350" y2="150" class="axis"/>
+  <line x1="50" y1="30" x2="50" y2="150" class="axis"/>
+  
+  <!-- 短期利率期货价格线 -->
+  <path d="M50,120 C70,110 90,115 110,110 C130,105 150,100 170,95 C190,90 210,80 230,70 C250,60 270,50 290,60 C310,70 330,80 350,75" 
+        class="chart-line" stroke="#8b5cf6"/>
+  
+  <!-- 长期利率期货价格线 -->
+  <path d="M50,130 C70,125 90,120 110,115 C130,110 150,105 170,100 C190,95 210,85 230,80 C250,75 270,70 290,75 C310,80 330,85 350,80" 
+        class="chart-line" stroke="#60a5fa"/>
+  
+  <!-- 债券价格关系线 -->
+  <path d="M50,80 C70,85 90,90 110,95 C130,100 150,105 170,110 C190,115 210,120 230,125 C250,130 270,135 290,130 C310,125 330,120 350,125" 
+        class="chart-line" stroke="#f59e0b" stroke-dasharray="5,3"/>
+  
+  <!-- 填充区域 -->
+  <path d="M50,120 C70,110 90,115 110,110 C130,105 150,100 170,95 C190,90 210,80 230,70 C250,60 270,50 290,60 C310,70 330,80 350,75 L350,150 L50,150 Z" 
+        class="area" fill="#8b5cf6"/>
+  
+  <!-- 数据点 -->
+  <circle cx="110" cy="110" r="3" class="dot" fill="#8b5cf6"/>
+  <circle cx="170" cy="95" r="3" class="dot" fill="#8b5cf6"/>
+  <circle cx="230" cy="70" r="3" class="dot" fill="#8b5cf6"/>
+  <circle cx="290" cy="60" r="3" class="dot" fill="#8b5cf6"/>
+  <circle cx="350" cy="75" r="3" class="dot" fill="#8b5cf6"/>
+  
+  <!-- 轴标签 -->
+  <text x="200" y="175" text-anchor="middle" class="label">时间</text>
+  <text x="25" y="90" text-anchor="middle" class="label" transform="rotate(-90,25,90)">利率 (%)</text>
+  
+  <!-- 图例 -->
+  <line x1="50" y1="180" x2="70" y2="180" class="chart-line" stroke="#8b5cf6"/>
+  <text x="75" y="184" class="label">短期利率期货</text>
+  
+  <line x1="180" y1="180" x2="200" y2="180" class="chart-line" stroke="#60a5fa"/>
+  <text x="205" y="184" class="label">长期利率期货</text>
+  
+  <line x1="310" y1="180" x2="330" y2="180" class="chart-line" stroke="#f59e0b" stroke-dasharray="5,3"/>
+  <text x="335" y="184" class="label">债券价格</text>
+</svg>

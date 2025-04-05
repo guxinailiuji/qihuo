@@ -1,0 +1,46 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bar { stroke: #10b981; stroke-width: 1; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .label { font-family: Arial; font-size: 12px; fill: #555; }
+    .title { font-family: Arial; font-size: 14px; font-weight: bold; fill: #333; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="200" fill="#f8fafc" rx="5" ry="5"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="50" y1="150" x2="350" y2="150" class="axis"/>
+  <line x1="50" y1="30" x2="50" y2="150" class="axis"/>
+  
+  <!-- 农产品期货柱状图 -->
+  <rect x="70" y="70" width="30" height="80" class="bar" fill="#10b981" fill-opacity="0.7"/>
+  <rect x="120" y="50" width="30" height="100" class="bar" fill="#10b981" fill-opacity="0.8"/>
+  <rect x="170" y="90" width="30" height="60" class="bar" fill="#10b981" fill-opacity="0.7"/>
+  <rect x="220" y="60" width="30" height="90" class="bar" fill="#10b981" fill-opacity="0.8"/>
+  <rect x="270" y="100" width="30" height="50" class="bar" fill="#10b981" fill-opacity="0.7"/>
+  <rect x="320" y="40" width="30" height="110" class="bar" fill="#10b981" fill-opacity="0.9"/>
+  
+  <!-- 季节影响线 -->
+  <path d="M50,50 C90,60 130,40 170,70 C210,90 250,30 290,40 C330,50 350,45" 
+        fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- 轴标签 -->
+  <text x="200" y="175" text-anchor="middle" class="label">农产品品种</text>
+  <text x="25" y="90" text-anchor="middle" class="label" transform="rotate(-90,25,90)">价格</text>
+  
+  <!-- 图例 -->
+  <rect x="50" y="180" width="10" height="10" fill="#10b981" fill-opacity="0.8"/>
+  <text x="65" y="189" class="label">交易量</text>
+  
+  <line x1="150" y1="185" x2="170" y2="185" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="180" y="189" class="label">季节影响</text>
+  
+  <!-- 农产品标签 -->
+  <text x="85" y="165" text-anchor="middle" class="label">小麦</text>
+  <text x="135" y="165" text-anchor="middle" class="label">玉米</text>
+  <text x="185" y="165" text-anchor="middle" class="label">大豆</text>
+  <text x="235" y="165" text-anchor="middle" class="label">棉花</text>
+  <text x="285" y="165" text-anchor="middle" class="label">糖</text>
+  <text x="335" y="165" text-anchor="middle" class="label">咖啡</text>
+</svg>

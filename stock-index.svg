@@ -1,0 +1,62 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart-line { fill: none; stroke-width: 2; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .grid { stroke: #eee; stroke-width: 1; }
+    .label { font-family: Arial; font-size: 12px; fill: #555; }
+    .title { font-family: Arial; font-size: 14px; font-weight: bold; fill: #333; }
+    .area { opacity: 0.2; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="200" fill="#f8fafc" rx="5" ry="5"/>
+  
+  <!-- 网格线 -->
+  <line x1="50" y1="50" x2="350" y2="50" class="grid"/>
+  <line x1="50" y1="100" x2="350" y2="100" class="grid"/>
+  <line x1="50" y1="150" x2="350" y2="150" class="grid"/>
+  <line x1="100" y1="30" x2="100" y2="150" class="grid"/>
+  <line x1="150" y1="30" x2="150" y2="150" class="grid"/>
+  <line x1="200" y1="30" x2="200" y2="150" class="grid"/>
+  <line x1="250" y1="30" x2="250" y2="150" class="grid"/>
+  <line x1="300" y1="30" x2="300" y2="150" class="grid"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="50" y1="150" x2="350" y2="150" class="axis"/>
+  <line x1="50" y1="30" x2="50" y2="150" class="axis"/>
+  
+  <!-- 沪深300股指期货价格线 -->
+  <path d="M50,120 C80,110 100,90 130,100 C160,80 180,70 200,60 C220,50 240,60 270,70 C300,80 320,60 350,50" 
+        class="chart-line" stroke="#ef4444"/>
+  
+  <!-- 上证50股指期货价格线 -->
+  <path d="M50,110 C80,100 100,80 130,90 C160,70 180,60 200,50 C220,40 240,50 270,60 C300,70 320,50 350,40" 
+        class="chart-line" stroke="#3b82f6"/>
+  
+  <!-- 中证500股指期货价格线 -->
+  <path d="M50,130 C80,120 100,100 130,110 C160,90 180,80 200,70 C220,60 240,70 270,80 C300,90 320,70 350,60" 
+        class="chart-line" stroke="#10b981"/>
+  
+  <!-- 填充区域 -->
+  <path d="M50,120 C80,110 100,90 130,100 C160,80 180,70 200,60 C220,50 240,60 270,70 C300,80 320,60 350,50 L350,150 L50,150 Z" 
+        class="area" fill="#ef4444"/>
+  
+  <!-- 轴标签 -->
+  <text x="200" y="175" text-anchor="middle" class="label">时间</text>
+  <text x="25" y="90" text-anchor="middle" class="label" transform="rotate(-90,25,90)">指数点位</text>
+  
+  <!-- 图例 -->
+  <line x1="50" y1="180" x2="70" y2="180" class="chart-line" stroke="#ef4444"/>
+  <text x="75" y="184" class="label">沪深300</text>
+  
+  <line x1="140" y1="180" x2="160" y2="180" class="chart-line" stroke="#3b82f6"/>
+  <text x="165" y="184" class="label">上证50</text>
+  
+  <line x1="230" y1="180" x2="250" y2="180" class="chart-line" stroke="#10b981"/>
+  <text x="255" y="184" class="label">中证500</text>
+  
+  <!-- 事件标记 -->
+  <circle cx="200" cy="60" r="4" fill="#ef4444" stroke="#fff" stroke-width="1"/>
+  <line x1="200" y1="60" x2="230" y2="40" stroke="#555" stroke-width="1" stroke-dasharray="2,1"/>
+  <text x="235" y="40" class="label">政策调整</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart-line { fill: none; stroke-width: 2.5; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .label { font-family: Arial; font-size: 12px; fill: #555; }
+    .title { font-family: Arial; font-size: 14px; font-weight: bold; fill: #333; }
+    .area { opacity: 0.3; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect x="0" y="0" width="400" height="200" fill="#f8fafc" rx="5" ry="5"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="50" y1="150" x2="350" y2="150" class="axis"/>
+  <line x1="50" y1="30" x2="50" y2="150" class="axis"/>
+  
+  <!-- WTI原油价格线 -->
+  <path d="M50,120 C80,110 100,80 130,100 C160,110 180,70 200,60 C220,50 240,70 270,40 C300,60 320,80 350,70" 
+        class="chart-line" stroke="#f59e0b"/>
+  
+  <!-- 布伦特原油价格线 -->
+  <path d="M50,130 C80,120 100,90 130,110 C160,120 180,80 200,70 C220,60 240,80 270,50 C300,70 320,90 350,80" 
+        class="chart-line" stroke="#ef4444"/>
+  
+  <!-- 天然气价格线 -->
+  <path d="M50,140 C80,130 100,140 130,120 C160,100 180,130 200,120 C220,110 240,90 270,110 C300,120 320,100 350,110" 
+        class="chart-line" stroke="#3b82f6"/>
+  
+  <!-- 填充区域 -->
+  <path d="M50,120 C80,110 100,80 130,100 C160,110 180,70 200,60 C220,50 240,70 270,40 C300,60 320,80 350,70 L350,150 L50,150 Z" 
+        class="area" fill="#f59e0b"/>
+  
+  <!-- 轴标签 -->
+  <text x="200" y="175" text-anchor="middle" class="label">时间</text>
+  <text x="25" y="90" text-anchor="middle" class="label" transform="rotate(-90,25,90)">价格 ($/桶)</text>
+  
+  <!-- 图例 -->
+  <line x1="50" y1="180" x2="70" y2="180" class="chart-line" stroke="#f59e0b"/>
+  <text x="75" y="184" class="label">WTI原油</text>
+  
+  <line x1="140" y1="180" x2="160" y2="180" class="chart-line" stroke="#ef4444"/>
+  <text x="165" y="184" class="label">布伦特原油</text>
+  
+  <line x1="250" y1="180" x2="270" y2="180" class="chart-line" stroke="#3b82f6"/>
+  <text x="275" y="184" class="label">天然气</text>
+  
+  <!-- 事件标记 -->
+  <circle cx="200" cy="60" r="4" fill="#f59e0b" stroke="#fff" stroke-width="1"/>
+  <line x1="200" y1="60" x2="230" y2="40" stroke="#555" stroke-width="1" stroke-dasharray="2,1"/>
+  <text x="235" y="40" class="label">OPEC决策</text>
+</svg>

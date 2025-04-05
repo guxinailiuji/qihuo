@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --font-geist-mono: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.font-geist-mono {
+    font-family: var(--font-geist-mono);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Section styling */
+.section-container {
+    border-radius: 8px;
+    border-left: 4px solid var(--section-color, #ccc);
+    background-color: rgba(var(--section-color-rgb, 200, 200, 200), 0.05);
+    position: relative;
+}
+
+.section-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(var(--section-color-rgb, 200, 200, 200), 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Table styling */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Section specific styling */
+#foreign-exchange { --section-color: #3b82f6; --section-color-rgb: 59, 130, 246; }
+#agricultural { --section-color: #10b981; --section-color-rgb: 16, 185, 129; }
+#energy { --section-color: #f59e0b; --section-color-rgb: 245, 158, 11; }
+#stock-index { --section-color: #ef4444; --section-color-rgb: 239, 68, 68; }
+#metals { --section-color: #f59e0b; --section-color-rgb: 245, 158, 11; }
+#interest-rate { --section-color: #8b5cf6; --section-color-rgb: 139, 92, 246; }
